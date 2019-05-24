@@ -1,0 +1,19 @@
+{
+  "name": "3Dweb_mouse_electron",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron src",
+    "build": "node el_build.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "electron": "^5.0.1",
+    "electron-builder": "^20.40.2"
+  }
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>Load a 3D model</title>
+    <style>
+        body { margin: 0; }
+    </style>
+</head>
+<body>
+<!-- サーバにダウンロードしたものを使う場合はこちら
+<script src="node_modules/three/build/three.js"></script>
+<script src="node_modules/three/examples/js/controls/OrbitControls.js"></script>
+<script src="node_modules/three/examples/js/loaders/OBJLoader.js"></script>
+<script src="node_modules/three/examples/js/loaders/MTLLoader.js"></script>
+<script src="node_modules/three/examples/js/loaders/TDSLoader.js"></script>
+--> 
+<script src="https://cdn.jsdelivr.net/npm/three@0.102.1/build/three.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.102.1/examples/js/controls/OrbitControls.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.102.1/examples/js/loaders/OBJLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.102.1/examples/js/loaders/MTLLoader.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/three@0.102.1/examples/js/loaders/TDSLoader.js"></script>
+
+<div align="center">
+    <br>
+    <!-- POSTで指定する場合はこちら
+    <a href="./?pattern=falcon">ミレニアム・ファルコン</a> &nbsp;&nbsp;&nbsp;
+    <a href="./?pattern=x-wing">X-wing</a> &nbsp;&nbsp;&nbsp;
+    <a href="./?pattern=F18">F18</a> &nbsp;&nbsp;&nbsp;
+    <a href="./?pattern=eagle">鷲</a> &nbsp;&nbsp;&nbsp;
+    <a href="./?pattern=enterprise">エンタープライズ</a> &nbsp;&nbsp;&nbsp;
+    <br>
+    -->
+    <input type="button" style="width:150px;" value="ミレニアム・ファルコン" onclick="init_disp_scene('falcon')"/>
+    <input type="button" style="width:150px;" value="X-wing"                 onclick="init_disp_scene('x-wing')"/>
+    <input type="button" style="width:150px;" value="F18"                    onclick="init_disp_scene('F18')"/>
+    <input type="button" style="width:150px;" value="鷲"                     onclick="init_disp_scene('eagle')"/>
+    <input type="button" style="width:150px;" value="エンタープライズ"       onclick="init_disp_scene('enterprise')"/>
+    <br>
+    <br>
+    <!-- 描画コンテナ -->
+    <div id="container" style="width:800px;height:400px"></div>
+</div>
+
+<script src="app.js"></script>  
+</body>
+</html>

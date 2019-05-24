@@ -1,0 +1,13 @@
+{
+  "name": "3Dweb_mouse",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "main": "main.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "three": "^0.104.0"
+  }
+}
