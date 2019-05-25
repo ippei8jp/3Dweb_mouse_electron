@@ -4,13 +4,17 @@
     <meta charset="UTF-8">
     <title>Load a 3D model</title>
     <style>
+        html { 
+            height:  100%;                 /* 高さ 指定しておかないと下位エレメントの%指定が有効にならない */
+        }
         body { 
             margin: 0;
+            height:  100%;                 /* 高さ */
             /* background-color: #00ff00; */    /* 背景色 */
         }
         div#content_top {
-            width:  1010px;                 /* 幅は固定値   ここで指定しておかないと下位エレメントの%指定が有効にならない*/
-            height:  400px;                 /* 高さは固定値 ここで指定しておかないと下位エレメントの%指定が有効にならない*/
+            width:  1010px;                 /* 幅は固定値   ここで指定しておかないと回り込み解除がうまく効かない */
+            height:  100%;                  /* 高さ */
             clear: both;                    /* 回り込み解除 */
             /* background-color: #ff0000; */    /* 背景色 */
         }
