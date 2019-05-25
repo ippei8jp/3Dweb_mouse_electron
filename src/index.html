@@ -4,7 +4,32 @@
     <meta charset="UTF-8">
     <title>Load a 3D model</title>
     <style>
-        body { margin: 0; }
+        body { 
+            margin: 0;
+            /* background-color: #00ff00; */    /* 背景色 */
+        }
+        div#content_top {
+            width:  1010px;                 /* 幅は固定値   ここで指定しておかないと下位エレメントの%指定が有効にならない*/
+            height:  400px;                 /* 高さは固定値 ここで指定しておかないと下位エレメントの%指定が有効にならない*/
+            clear: both;                    /* 回り込み解除 */
+            /* background-color: #ff0000; */    /* 背景色 */
+        }
+        nav { 
+            width:  200px;                  /* 幅は固定値 */
+            height: 100%;                   /* 高さは上位エレメントに合わせる */
+            float: left;                    /* 左寄せ */
+            background-color: #99cc33;      /* 背景色 */
+        }
+        div#content_main {
+            width:  calc(100% - 200px);     /* 100%からnavの幅だけ差し引く */
+            height: 100%;                   /* 高さは上位エレメントに合わせる */
+            display:table;                  /* なぜかこれがないとうまく配置できない */
+            /* background-color: #0000ff; */    /* 背景色 */
+        }
+        div#container {
+            width:  800px;
+            height: 400px;
+        }
     </style>
 </head>
 <body>
@@ -21,8 +46,8 @@
 <script src="https://cdn.jsdelivr.net/npm/three@0.102.1/examples/js/loaders/MTLLoader.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.102.1/examples/js/loaders/TDSLoader.js"></script>
 
-<div align="center">
-    <br>
+<div id="content_top">
+  <nav>
     <!-- POSTで指定する場合はこちら
     <a href="./?pattern=falcon">ミレニアム・ファルコン</a> &nbsp;&nbsp;&nbsp;
     <a href="./?pattern=x-wing">X-wing</a> &nbsp;&nbsp;&nbsp;
@@ -31,15 +56,18 @@
     <a href="./?pattern=enterprise">エンタープライズ</a> &nbsp;&nbsp;&nbsp;
     <br>
     -->
-    <input type="button" style="width:150px;" value="ミレニアム・ファルコン" onclick="init_disp_scene('falcon')"/>
-    <input type="button" style="width:150px;" value="X-wing"                 onclick="init_disp_scene('x-wing')"/>
-    <input type="button" style="width:150px;" value="F18"                    onclick="init_disp_scene('F18')"/>
-    <input type="button" style="width:150px;" value="鷲"                     onclick="init_disp_scene('eagle')"/>
-    <input type="button" style="width:150px;" value="エンタープライズ"       onclick="init_disp_scene('enterprise')"/>
+    <input type="button" style="width:100%;" value="ミレニアム・ファルコン" onclick="init_disp_scene('falcon')"/>      <br>
+    <input type="button" style="width:100%;" value="X-wing"                 onclick="init_disp_scene('x-wing')"/>      <br>
+    <input type="button" style="width:100%;" value="F18"                    onclick="init_disp_scene('F18')"/>         <br>
+    <input type="button" style="width:100%;" value="鷲"                     onclick="init_disp_scene('eagle')"/>       <br>
+    <input type="button" style="width:100%;" value="エンタープライズ"       onclick="init_disp_scene('enterprise')"/>  <br>
     <br>
     <br>
+  </nav>
+  <div id="content_main">
     <!-- 描画コンテナ -->
-    <div id="container" style="width:800px;height:400px"></div>
+    <div id="container"></div>
+  </div>
 </div>
 
 <script src="app.js"></script>  

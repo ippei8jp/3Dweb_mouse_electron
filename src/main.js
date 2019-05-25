@@ -7,8 +7,8 @@ let mainWindow;
 function createWindow() {
   // メインウィンドウを作成します
   mainWindow = new BrowserWindow({
-    width: 900,
-    height: 600
+    width: 1100,
+    height: 500
   });
 
   // メインウィンドウに表示するURLを指定します
