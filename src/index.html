@@ -67,6 +67,18 @@
     <input type="button" style="width:100%;" value="エンタープライズ"       onclick="init_disp_scene('enterprise')"/>  <br>
     <br>
     <br>
+    <br>
+    <br>
+    <!-- エクスプローラの起動サンプル -->
+    <input type="button" id="open-file-manager" style="width:100%;" value="エクスプローラ""/><br>
+    <script type="text/javascript">
+      require('./file-manager')
+    </script>
+<!-- こんな書き方もできるが、変数のスコープを考えると使わない方がよさそう
+    <script src="file-manager.js"></script>  
+-->
+
+    <br>
   </nav>
   <div id="content_main">
     <!-- 描画コンテナ -->

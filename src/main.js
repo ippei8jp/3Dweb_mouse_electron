@@ -8,7 +8,10 @@ function createWindow() {
   // メインウィンドウを作成します
   mainWindow = new BrowserWindow({
     width: 1100,
-    height: 500
+    height: 500,
+     webPreferences: {
+        nodeIntegration: true       // htmlファイルからrequire()を使えるようにするにはこの設定が必要
+      }
   });
 
   // メインウィンドウに表示するURLを指定します
